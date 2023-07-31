@@ -15,7 +15,6 @@ mccabe==0.7.0
 platformdirs==3.10.0
 pycparser==2.21
 pylint==2.17.5
-PyYAML @ file:///private/tmp/pyyaml-20230718-6387-cxgeib/PyYAML-6.0.1
 tomlkit==0.12.1
 Werkzeug==2.3.6
 wrapt==1.15.0
