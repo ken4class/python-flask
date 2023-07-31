@@ -1,12 +1,22 @@
+astroid==2.15.6
 blinker==1.6.2
+Bootstrap-Flask==2.3.0
 cffi==1.15.1
 click==8.1.6
+dill==0.3.7
 docutils==0.20.1
 Flask==2.3.2
+isort==5.12.0
 itsdangerous==2.1.2
 Jinja2==3.1.2
+lazy-object-proxy==1.9.0
 MarkupSafe==2.1.3
+mccabe==0.7.0
+platformdirs==3.10.0
 pycparser==2.21
+pylint==2.17.5
+PyYAML @ file:///private/tmp/pyyaml-20230718-6387-cxgeib/PyYAML-6.0.1
+tomlkit==0.12.1
 Werkzeug==2.3.6
-Flask
-bootstrap-flask
+wrapt==1.15.0
+WTForms==3.0.1
