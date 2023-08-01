@@ -35,4 +35,6 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         push: true
-        tags: kenkool23/python-app:latest
+        tags: 
+        - kenkool23/python-app:latest
+        - kenkool23/python-app:${{github.run_number}}
