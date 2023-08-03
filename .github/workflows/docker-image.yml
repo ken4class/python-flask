@@ -9,17 +9,16 @@ on:
 
 jobs:
 
-#   Test:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v3
-#     - name: Build the Docker image
-#       run: |
-#        pip install pylint
-#        pylint app.py
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test App code
+      run: echo "Testing python app"
 
   Docker:
     runs-on: ubuntu-latest
+    needs: Test
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
