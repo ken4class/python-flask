@@ -39,3 +39,22 @@ jobs:
         tags: |
          kenkool23/python-app:${{github.run_number}}
          kenkool23/python-app:latest
+
+  Run-service:
+    runs-on: ubuntu-latest
+    needs: Docker
+    steps:
+      - name: Configure AWS Credentials For GitHub Actions
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Deploy AWS ECS Service
+        uses: icalia-actions/deploy-aws-ecs-service@v0.0.7
+        with:
+          name: app-serv-lbbb
+          cluster: appCluster
+          force-new-deployment: true
+          container-images: kenkool23/python-app:latest
