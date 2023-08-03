@@ -52,4 +52,4 @@ jobs:
           aws-region: us-east-2
 
       - name: Update Service
-        run: aws update-service --service app-serv-lbbb --cluster appCluster --force-new-deployment
+        run: aws ecs update-service --service app-serv-lbbb --cluster appCluster --force-new-deployment
