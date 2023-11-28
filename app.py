@@ -10,7 +10,7 @@ def index():
             product = num1 * num2
             return render_template('answer.html', product=product)
         except ValueError:
-            return "Please enter valid numbers."
+            return "Please enter valid numbers.."
     return render_template('index.html')
 
 if __name__ == '__main__':
